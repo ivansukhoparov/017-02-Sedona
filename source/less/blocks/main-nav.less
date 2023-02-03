@@ -1,0 +1,172 @@
+.main-nav {
+  background-color: @background-trird;
+
+  @media (min-width: @tablet-width) {
+    background-color: @background-main;
+  }
+}
+
+.main-nav__toogle {
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-color: @background-main;
+  display: block;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toogle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 4px;
+    background-color: @main-color;
+    box-shadow: 0 9px 0 0 @main-color, 0 18px 0 0 @main-color;
+  }
+
+  &:hover::before {
+    background-color: fade(@main-color, 60%);
+    box-shadow: 0 9px 0 0 fade(@main-color, 60%),
+      0 18px 0 0 fade(@main-color, 60%);
+  }
+
+  &:active::before {
+    background-color: fade(@main-color, 30%);
+    box-shadow: 0 9px 0 0 fade(@main-color, 30%),
+      0 18px 0 0 fade(@main-color, 30%);
+  }
+}
+
+.main-nav--opened .main-nav__toogle {
+  background-color: @background-trird;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -2px;
+    width: 28px;
+    height: 4px;
+    background-color: @text-light-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(@text-light-color, 60%);
+  }
+
+  &:active::after,
+  &:active::before {
+    background-color: fade(@text-light-color, 30%);
+  }
+}
+
+.main-nav--opened {
+  z-index: 1;
+}
+
+.main-nav__list {
+  .do-list-clear;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.main-nav__item {
+  height: 26px;
+  padding: 17px 0 12px 0;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    box-shadow: inset 0 1px 1px rgb(#ffffff, 20%),
+      inset 0 -1px 1px rgb(#000000, 20%);
+
+    &:last-child {
+      box-shadow: inset 0 -7px 7px rgb(#000000, 20%);
+    }
+
+    &:first-child {
+      box-shadow: inset 0 -1px 1px rgb(#000000, 20%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 20%;
+
+    &--current .main-nav__link {
+      color: @text-current-menu-color;
+    }
+      }
+}
+
+.main-nav__link {
+  .font-big-bold;
+  color: @text-light-color;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    .font-bold-small;
+    color: @text-main-color;
+
+    &:hover {
+      color: @main-color;
+    }
+
+    &:active {
+      color: fade(@text-main-color, 30%);
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__toogle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
+  position: static;
+}
+
+.main-nav--nojs {
+  z-index: 1;
+}
+
+.main-nav__item--empty {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}

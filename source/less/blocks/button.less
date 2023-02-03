@@ -1,0 +1,22 @@
+.button {
+  .font-buttons;
+  background-color: @main-color;
+  color: @text-light-color;
+  padding: 16px 0;
+  margin: auto;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @main-hover-color;
+  }
+
+  &:active {
+    background-color: @main-active-color;
+    color: @text-active-button-color;
+  }
+
+  &--disabled {
+    background-color: @main-disable-color;
+  }
+}

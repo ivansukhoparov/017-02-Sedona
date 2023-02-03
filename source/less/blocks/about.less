@@ -1,0 +1,36 @@
+.about__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 32px 0;
+}
+
+.about__title {
+  .font-big-bold;
+
+  color: @text-main-color;
+  margin: 0 0 35px 0;
+  max-width: 286px;
+}
+
+.about__text {
+  .font-normal-small;
+  color: @text-lightly-color;
+  margin: 0;
+  max-width: 286px;
+}
+
+@media (min-width: @tablet-width) {
+  .about__header {
+    padding: 50px 0 50px 0;
+  }
+
+  .about__title {
+    max-width: 520px;
+  }
+  .about__text {
+    max-width: 520px;
+  }
+}

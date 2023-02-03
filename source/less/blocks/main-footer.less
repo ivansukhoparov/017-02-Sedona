@@ -1,0 +1,22 @@
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  height: 233px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.main-footer__logo {
+  .font-big-bold;
+  text-decoration: none;
+  color: @text-main-color;
+}
