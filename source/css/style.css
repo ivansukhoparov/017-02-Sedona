@@ -150,7 +150,7 @@
   background-image: url("../../img/icons/icon-food.svg");
 }
 .advantages__item--souvenirs::before {
-  background-image: url("../../img/icons/con-souvenirs.svg");
+  background-image: url("../../img/icons/icon-souvenirs.svg");
 }
 .advantages__title {
   font-weight: 700;
