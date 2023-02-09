@@ -498,39 +498,119 @@ input:disabled + .feedback__label--checkbox:after {
   width: 1px;
   background-color: #e5e5e5;
 }
-.foto-gallery__list {
+.photo-gallery__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.foto-gallery__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
+@media (min-width: 768px) {
+  .photo-gallery__list {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
-.foto-gallery__item {
+@media (min-width: 1200px) {
+  .photo-gallery__list {
+    padding: 30px 0 40px 0;
+  }
+}
+.photo-gallery__item {
   padding: 25px 20px 25px 20px;
+  border-bottom: 1px solid #e5e5e5;
 }
-.foto-gallery__copyright {
-  font-weight: 400;
+@media (min-width: 768px) {
+  .photo-gallery__item {
+    width: 50%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-gallery__item--first {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .photo-gallery__item {
+    width: 33.333333%;
+  }
+  .photo-gallery__item--first {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .photo__info {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f2f2f2;
+  }
+}
+@media (min-width: 1200px) {
+  .photo__info {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: -80px;
+    color: #ffffff;
+  }
+}
+.photo__image {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .photo__image {
+    height: 267px;
+  }
+}
+@media (min-width: 768px) {
+  .photo__image--first {
+    height: 400px;
+  }
+}
+.photo__title {
+  margin: 15px 0 0 0;
+  font-weight: 700;
   font-size: 14px;
   line-height: 21px;
+}
+.photo__copyright {
   text-transform: none;
-}
-.foto-gallery__likes {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-}
-.video-gallery__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-}
-.video-gallery__text {
+  margin: 0 0 11px 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+}
+.photo__likes {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+.photo__likes-button {
+  display: block;
+  background-image: url('../../img/icons/like-icon.svg');
+  opacity: 0.3;
+  width: 23px;
+  height: 21px;
+}
+@media (min-width: 1200px) {
+  .photo__likes-button {
+    background-image: url('../../img/icons/like-icon-light.svg');
+    opacity: 1;
+  }
+}
+.photo__likes-button:hover {
+  opacity: 0.7;
+}
+.photo__likes-button:active {
+  opacity: 0.5;
 }
 .main-header {
   height: 56px;
@@ -949,6 +1029,74 @@ input:disabled + .feedback__label--checkbox:after {
 .video-gallery {
   text-align: center;
   padding: 20px 20px 0 20px;
+}
+@media (min-width: 768px) {
+  .video-gallery {
+    padding: 38px 60px 40px 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .video-gallery {
+    padding: 30px 200px 40px 200px;
+  }
+}
+.video-gallery__wrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.video-gallery__image {
+  width: 100%;
+  height: 100%;
+}
+.video-gallery__play-button {
+  background-image: url('../../img/icons/play-button.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 54px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  opacity: 0.7;
+}
+.video-gallery__play-button:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+.video-gallery__play-button:active {
+  opacity: 0.5;
+}
+@media (min-width: 768px) {
+  .video-gallery__header {
+    margin: 0 0 63px 0;
+  }
+}
+.video-gallery__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+@media (min-width: 768px) {
+  .video-gallery__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 26px;
+    margin: 32px 0 20px 0;
+  }
+}
+.video-gallery__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+@media (min-width: 768px) {
+  .video-gallery__text {
+    margin: auto;
+    line-height: 24px;
+    width: 435px;
+  }
 }
 .visually-hidden {
   position: absolute;
