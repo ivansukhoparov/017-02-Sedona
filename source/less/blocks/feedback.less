@@ -1,10 +1,28 @@
+.feedback__form {
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+}
+
 .feedback__fieldset {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
   border: none;
-  border-top: 1px solid #e5e5e5;
+
   padding: 24px 20px 35px 20px;
   margin: 0;
+
+  &--impression,
+  &--visited,
+  &--emotions {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0 60px 0;
+  }
 }
 
 .feedback__legend {
@@ -13,10 +31,33 @@
   padding: 0;
 
   .font-big-bold;
+
+  @media (min-width: @tablet-width) {
+    .font-biger-bold;
+  }
+
+  &--impression,
+  &--emotions {
+    @media (min-width: @tablet-width) {
+      background-color: @background-main;
+      width: 400px;
+      margin: -36px auto 28px auto;
+    }
+  }
+
+
+  &--visited {
+    @media (min-width: @tablet-width) {
+      background-color: @background-main;
+      width: 400px;
+      margin: -52px auto 28px auto;
+    }
+  }
 }
 
-.feedback__label {
 
+.feedback__label {
+  min-width: 200px;
   .font-form;
 
   &--radio,
@@ -52,6 +93,12 @@
   &--required {
     text-align: right;
     color: @form-text-required;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -93,19 +140,18 @@
     outline: 4px solid @form-active-border;
     outline-offset: -4px;
   }
-
-
-
 }
 
 .feedback__textarea {
+  margin: 0 0 56px 0;
   min-height: 118px;
   min-width: 248px;
   padding: 16px;
   border: none;
   background-color: @form-light-background;
-
   .font-form;
+
+
 
   &::placeholder {
     color: @form-text-tip;
@@ -113,6 +159,11 @@
 
   &:hover {
     background-color: @form-hover-background;
+  }
+
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
   }
 
 }
@@ -138,6 +189,11 @@
 
 .feedback__button {
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 324px;
+  }
 }
 
 .feedback__radio,
@@ -183,4 +239,34 @@ input:disabled+.feedback__label--checkbox {
   &:after {
     opacity: 0.3;
   }
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--impression {
+    @media (min-width: @tablet-width) {
+      padding: 0 36px;
+    }
+  }
+
+  &--visited {
+    @media (min-width: @tablet-width) {
+      padding: 0 84px;
+    }
+  }
+}
+
+.feedback__separator {
+  margin: 24px 44px 60px 44px;
+  display: block;
+  width: 1px;
+  background-color: @form-active-border;
 }
