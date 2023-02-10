@@ -53,7 +53,7 @@
 }
 
 .reasons__description {
-  margin: 0;
+  margin: 0 32px;
   padding: 26px 0;
   .font-normal-small;
   color: @text-lightly-color;
@@ -62,16 +62,13 @@
 .reasons__wrapper {
   text-align: center;
 
-  &--highlighted {
-    padding: 40px 20px 36px 20px;
-  }
-
   @media (min-width: @tablet-width) {
     &--highlighted {
-      width: 24.35%;
-      min-width: 256px;
-      max-width: 400px;
-      padding: 40px 4.35% 36px 4.35%;
+      width: 33.33333%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -80,6 +77,10 @@
   object-fit: cover;
   width: 100%;
   background-color: @background-trird;
+
+  @media (min-width: @tablet-width) {
+    width: 66.666666%;
+  }
 }
 
 .reasons__element {
