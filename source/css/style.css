@@ -54,12 +54,14 @@
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
+  font-display: swap;
   src: url("../../fonts/ptsans.woff");
   src: url("../../fonts/ptsans.woff2");
 }
 @font-face {
   font-family: "PT Sans";
   font-weight: 700;
+  font-display: swap;
   src: url("../../fonts/ptsansbold.woff");
   src: url("../../fonts/ptsansbold.woff2");
 }
@@ -812,6 +814,120 @@ input:disabled + .feedback__label--checkbox:after {
   object-fit: cover;
   background-color: #81b3d2;
 }
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .modal {
+    align-items: center;
+  }
+}
+.modal__background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+}
+.modal__window {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 280px;
+}
+@media (min-width: 768px) {
+  .modal__window--error {
+    height: 347px;
+    width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .modal__window--succes {
+    height: 347px;
+    width: 600px;
+  }
+}
+.modal__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  width: 240px;
+  margin: 45px auto 24px auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .modal__title {
+    width: 220px;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 45px auto 24px auto;
+  }
+  .modal__title--succes {
+    width: 400px;
+  }
+}
+.modal__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  width: 220px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .modal__text {
+    width: 310px;
+  }
+  .modal__text--succes {
+    width: 400px;
+  }
+}
+.modal__button {
+  margin: 30px auto 35px auto;
+  margin-bottom: 35px;
+  height: 58px;
+  width: 180px;
+}
+@media (min-width: 768px) {
+  .modal__button {
+    width: 272px;
+    margin: 34px auto 49px auto;
+  }
+}
+.modal__button--succes {
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .modal__button--succes {
+    width: 485px;
+  }
+}
+.modal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98px;
+  background-color: #f2f2f2;
+}
+@media (min-width: 768px) {
+  .modal__wrapper {
+    width: 100%;
+    height: 146px;
+  }
+}
+.modal--hidden {
+  display: none;
+}
+.modal--open {
+  height: 100vh;
+  overflow: hidden;
+  padding-right: 15px;
+}
 .page {
   min-width: 320px;
   margin: auto;
@@ -1214,107 +1330,4 @@ input:disabled + .feedback__label--checkbox:after {
     height: 520px;
   }
 }
-/*
-
-.about {
-  outline: 5px solid #1eff008c;
-  outline-offset: -5px;
-}
-
-.booking {
-  outline: 5px solid #c300ff8c;
-  outline-offset: -5px;
-}
-
-.button {
-  outline: 5px solid #d0ff008c;
-  outline-offset: -5px;
-}
-
-.developer {
-  outline: 5px solid #ff008c8c;
-  outline-offset: -5px;
-}
-
-.feedback {
-  outline: 5px solid #ff00008c;
-  outline-offset: -5px;
-}
-
-.foto-gallery {
-  outline: 5px solid #ffe600d8;
-  outline-offset: -5px;
-}
-
-.logo {
-  outline: 5px solid #ff00aac0;
-  outline-offset: -5px;
-}
-
-.main-container {
-  outline: 5px solid #ff0000e8;
-  outline-offset: -5px;
-}
-
-.main-header {
-  outline: 5px solid #ff9100d7;
-  outline-offset: -5px;
-}
-
-.main-footer {
-  outline: 5px solid #00ff37be;
-  outline-offset: -5px;
-}
-
-.main-nav {
-  outline: 5px solid #0400ffcb;
-  outline-offset: -5px;
-}
-
-.map {
-  outline: 5px solid #00ffeace;
-  outline-offset: -5px;
-}
-
-.nav {
-  outline: 5px solid #00ffaad3;
-  outline-offset: -5px;
-}
-
-.reasons {
-  outline: 5px solid #4400ffe0;
-  outline-offset: -5px;
-}
-
-.social {
-  outline: 5px solid #d5d807ea;
-  outline-offset: -5px;
-}
-
-.template-header {
-  outline: 5px solid #ff99008c;
-  outline-offset: -5px;
-}
-
-.video-gallery {
-  outline: 5px solid #00aeffe3;
-  outline-offset: -5px;
-}
-
-.wellcome {
-  outline: 5px solid #ff0015ec;
-  outline-offset: -5px;
-}
-
-
-.foto-gallery__item {
-  outline: 4px solid #c300ff8c;
-  outline-offset: -4px;
-}
-
-.video-gallery {
-  outline: 4px solid #00d9ff8c;
-  outline-offset: -4px;
-}
-*/
 /*# sourceMappingURL=style.css.map */
