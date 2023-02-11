@@ -1114,6 +1114,9 @@ input:disabled + .feedback__label--checkbox:after {
 .video-gallery__play-button:active {
   opacity: 0.5;
 }
+.video-gallery__header {
+  margin: 0 0 38px 0;
+}
 @media (min-width: 768px) {
   .video-gallery__header {
     margin: 0 0 63px 0;
@@ -1136,12 +1139,13 @@ input:disabled + .feedback__label--checkbox:after {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  max-width: 445px;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .video-gallery__text {
-    margin: auto;
     line-height: 24px;
-    width: 435px;
+    width: 445px;
   }
 }
 .visually-hidden {
